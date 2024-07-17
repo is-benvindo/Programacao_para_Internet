@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 08</title>
+    <style id="estilo">
+        body {
+            background-color: rgb(7, 7, 7);
+            color: rgb(249, 249, 255);
+        }
+    </style>
+    <script type="application/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            var coresOriginais = {
+                backgroundColor: 'rgb(7, 7, 7)',
+                color: 'rgb(249, 249, 255)'
+            };
+
+            var novasCores = {
+                backgroundColor: 'white',
+                color: 'black'
+            };
+
+          
+            var usandoNovasCores = false;
+
+            function mudarCores() {
+              
+                if (usandoNovasCores) {
+                  
+                    document.body.style.backgroundColor = coresOriginais.backgroundColor;
+                    document.body.style.color = coresOriginais.color;
+                } else {
+                 
+                    document.body.style.backgroundColor = novasCores.backgroundColor;
+                    document.body.style.color = novasCores.color;
+                }
+               
+                usandoNovasCores = !usandoNovasCores;
+            }
+
+            document.querySelector('button').addEventListener('click', mudarCores);
+        });
+    </script>
+</head>
+<body>
+    <h1>Página com alto contraste</h1>
+    <p>Texto aleatório</p>
+    <button>Clique aqui para alternar o contraste</button>
+</body>
+</html>

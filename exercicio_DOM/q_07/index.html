@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 07</title>
+</head>
+<body>
+    <h1>Digite algo em caixa baixa</h1>
+    <form id="meuFormulario">
+        <label for="algo">Algo:</label>
+        <input type="text" id="algo" name="algo">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <p id="textoCaixaAlta"></p>
+</body>
+<script type="application/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        function transformarCaixaAlta(event) {
+
+            event.preventDefault();
+
+            var texto = document.getElementById('algo').value;
+
+            var textoMaiusculo = texto.toUpperCase();
+
+            document.getElementById("textoCaixaAlta").textContent = textoMaiusculo;
+        }
+
+        document.getElementById('meuFormulario').addEventListener('submit', transformarCaixaAlta);
+    });
+</script>
+</html>

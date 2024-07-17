@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste getElementsByTagName()</title>
+    <script type="application/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            function alterarTextos() {
+      
+                var paragrafos = document.getElementsByTagName('p');
+ 
+                for (var i = 0; i < paragrafos.length; i++) {
+                    paragrafos[i].textContent = 'Parágrafo modificado!';
+                }
+            }
+
+            document.querySelector('button').addEventListener('click', alterarTextos);
+        });
+    </script>
+</head>
+<body>
+    <h1>Teste do Método getElementsByTagName()</h1>
+    <p>Primeiro parágrafo de exemplo.</p>
+    <p>Segundo parágrafo de exemplo.</p>
+    <button>Clique aqui para alterar os textos</button>
+</body>
+</html>

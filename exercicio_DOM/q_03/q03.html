@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 03</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        .box {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contagem de parágrafos</h1>
+        <div class="box">
+            <p>teste</p>
+            <p>teste2</p>
+            <p>teste3</p>
+            <p>teste4</p>
+        </div>
+        <div class="box">
+            <p id="conteudoParagrafo"></p>
+        </div>
+    </div>
+</body>
+<script type="application/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        function contarParagrafos() {
+
+            var paragrafos = document.getElementsByTagName('p');
+
+            return paragrafos.length - 1;
+        }
+
+        document.getElementById("conteudoParagrafo").textContent = "Número de parágrafos: " + contarParagrafos();
+    });
+</script>
+</html>

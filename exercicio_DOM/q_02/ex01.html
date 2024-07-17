@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste getElementById()</title>
+    <script type="application/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            function alterarTexto() {
+
+                var paragrafo = document.getElementById('meuParagrafo');
+
+                paragrafo.textContent = 'Parágrafo modificado!';
+            }
+
+            document.querySelector('button').addEventListener('click', alterarTexto);
+        });
+    </script>
+</head>
+<body>
+    <h1>Teste do Método getElementById()</h1>
+    <p id="meuParagrafo">Parágrafo antes da modificação.</p>
+    <button>Clique aqui para alterar o texto</button>
+</body>
+</html>

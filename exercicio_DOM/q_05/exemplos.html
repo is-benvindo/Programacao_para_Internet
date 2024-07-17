@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diferenças entre textContent e innerText</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="exemplo">
+        Este é um texto visível.
+        <span class="hidden">Este texto está escondido.</span>
+    </div>
+
+    <script>
+        var div = document.getElementById('exemplo');
+        
+        console.log("textContent:", div.textContent);
+
+        console.log("innerText:", div.innerText);
+    </script>
+</body>
+</html>
